@@ -3,7 +3,7 @@ class CfgPatches
 	class harr_randomInjuries
 	{
 		author = "Harrison";
-		requiredAddons[] = {"ace_medical", "zen_dialog"};
+		requiredAddons[] = {"ace_medical", "zen_dialog", "kat_main"};
 		units[] = {"harr_randomInjuries_setInjured"};
 	};
 };
