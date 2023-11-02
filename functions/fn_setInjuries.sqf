@@ -43,6 +43,10 @@ if (isNull _object || !(_object isKindOf "CAManBase") || !alive _object) exitWit
 				for "_i" from 0 to _numWounds do {
 					private _target = _bodyParts deleteAt (floor random (count _bodyParts));
 					private _damage = random [0.65, 0.75, 0.85];
+					if (_target == "Body") then
+					{
+						[_unit, [_damage, _target], objNull, "bullet"] call kat_breathing_fnc_handlePulmoHit;
+					};
 					[_unit, _damage, _target, "bullet"] call ACE_medical_fnc_addDamageToUnit;
 				};
 			};
@@ -52,6 +56,10 @@ if (isNull _object || !(_object isKindOf "CAManBase") || !alive _object) exitWit
 				for "_i" from 0 to _numWounds do {
 					private _target = _bodyParts deleteAt (floor random (count _bodyParts));
 					private _damage = random [1.0, 1.25, 1.5];
+					if (_target == "Body") then
+					{
+						[_unit, [_damage, _target], objNull, "bullet"] call kat_breathing_fnc_handlePulmoHit;
+					};
 					[_unit, _damage, _target, "bullet"] call ACE_medical_fnc_addDamageToUnit;
 				};
 			};
